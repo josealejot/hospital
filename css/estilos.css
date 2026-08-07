@@ -1,0 +1,47 @@
+
+
+
+body {
+    background-color: #f0f4f8 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para la tarjeta (card) del login */
+.card {
+    border: none;
+    border-radius: 15px; /* Bordes más redondeados y modernos */
+}
+
+/* Sombra suave para que el formulario resalte */
+.shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ajustes para el botón principal */
+.btn-primary {
+    background-color: #0056b3; /* Azul médico más formal */
+    border-color: #0056b3;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+    border-color: #004494;
+    transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el mouse */
+}
+
+/* Ajuste a los campos de entrada de texto */
+.form-control {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.25);
+}
