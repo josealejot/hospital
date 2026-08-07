@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital CESDE - Panel de Paciente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">🏥 Hospital CESDE</a>
+            <div class="d-flex align-items-center">
+                <span class="navbar-text text-white me-3 fw-bold" id="bienvenida-usuario">
+                    Bienvenido, Paciente
+                </span>
+                <button class="btn btn-outline-light btn-sm" id="btn-cerrar-sesion">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary mb-4">📅 Solicitar Cita</h4>
+                        
+                        <form id="formulario-citas">
+                            <div class="mb-3">
+                                <label for="especialidad-cita" class="form-label">Especialidad</label>
+                                <select class="form-select" id="especialidad-cita" required>
+                                    <option value="" selected disabled>Seleccione una especialidad...</option>
+                                    <option value="Medicina General">Medicina General</option>
+                                    <option value="Cardiología">Cardiología</option>
+                                    <option value="Pediatría">Pediatría</option>
+                                    <option value="Odontología">Odontología</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="fecha-cita" class="form-label">Fecha de la cita</label>
+                                <input type="date" class="form-control" id="fecha-cita" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="hora-cita" class="form-label">Hora</label>
+                                <input type="time" class="form-control" id="hora-cita" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-success w-100" id="btn-agendar">Agendar Cita</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary mb-4">📋 Mi Historial de Citas</h4>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Hora</th>
+                                        <th>Especialidad</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-citas">
+                                    </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/funciones-paciente.js"></script>
+</body>
+</html>
